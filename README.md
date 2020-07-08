@@ -21,17 +21,17 @@ Assuming you have Docker set up on your system, run
 
 ```cd``` to the main project directory and run
 
-	docker run -p 8888:8888 -v "$PWD":/home/jovyan/ 2020lavickova
+	docker run -p 8888:8888 -v "$PWD":/home/jovyan/ nadanai263/2020lavickova
 This mounts the repository's working directory to the container. More information can be found [here](https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html).
 
-3. You can also build the same Docker image from the Dockerfile: 
+3. You can also build the same image from the Dockerfile: 
 
 ```cd``` to the Dockerfile folder and run
 
-	docker build -t lavjul .
-where ```lavjul``` is the arbitrary name of the new Docker container. This builds a new container based on the latest jupyter/datascience-notebook image, which contains working distributions of Julia, Python, and R, and a Jupyter notebook installation. To start the container, ```cd``` to the main repo directory and run
+	docker build -t yourcontainername .
+where ```yourcontainername``` is the arbitrary name of the new Docker container. This builds a new container based on the latest jupyter/datascience-notebook image, which contains working distributions of Julia, Python, and R, and a Jupyter notebook installation. To start the container, ```cd``` to the main repo directory and run
 
-	docker run -p 8888:8888 -v "$PWD":/home/jovyan/ lavjul
+	docker run -p 8888:8888 -v "$PWD":/home/jovyan/ yourcontainername
 
 ---
 
